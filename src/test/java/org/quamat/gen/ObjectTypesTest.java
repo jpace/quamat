@@ -73,7 +73,6 @@ public class ObjectTypesTest extends Parameterized {
     }
 
     private List<Object[]> parametersForAddUndecoratedType() {
-        StringBuilder sb = new StringBuilder("xyz");
         return paramsList(params(true, StringBuilder.class, new StringBuilder()),
                 params(true, StringBuffer.class, new StringBuffer()),
                 params(false, StringBuffer.class, new StringBuilder()));

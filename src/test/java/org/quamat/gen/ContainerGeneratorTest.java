@@ -60,8 +60,8 @@ public class ContainerGeneratorTest extends GeneratorTestCase {
     @Test
     @Parameters
     @TestCaseName("{method}(...) #{index} [{params}]")
-    public <T> void withinLimit(boolean expected, ContainerGenerator fmtr, int idx) {
-        boolean result = fmtr.withinLimit(idx);
+    public <T> void withinLimit(boolean expected, ContainerGenerator gen, int idx) {
+        boolean result = gen.withinLimit(idx);
         assertThat(result, equalTo(expected));
     }
 

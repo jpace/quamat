@@ -1,9 +1,8 @@
 package org.org.quamat;
 
-import org.incava.ijdk.collect.StringArray;
 import org.junit.Test;
-import org.qualog.format.MessageFormatter;
-import org.qualog.writer.StringListWriter;
+import org.quamat.fmt.MessageFormatter;
+import org.quamat.io.StringListWriter;
 import org.quamat.gen.Generator;
 import org.quamat.gen.GeneratorTestCase;
 import org.quamat.gen.StringGenerator;

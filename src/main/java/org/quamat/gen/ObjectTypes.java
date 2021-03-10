@@ -79,6 +79,7 @@ public class ObjectTypes {
             return obj.toString();
         } else {
             ObjectDecorator dec = new ObjectDecorator();
+            // yes, == for identity, not .equals for equivalence
             return msg == NONE ? dec.toString(obj) : dec.toString(obj, msg);
         }
     }

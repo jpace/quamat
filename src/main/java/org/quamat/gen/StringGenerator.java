@@ -1,6 +1,7 @@
 package org.quamat.gen;
 
 import org.quamat.fmt.StringFormatter;
+import org.quamat.io.StringWriter;
 
 /**
  * Generates one line, using the formatter and writer.

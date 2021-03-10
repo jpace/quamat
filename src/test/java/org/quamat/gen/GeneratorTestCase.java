@@ -1,8 +1,8 @@
 package org.quamat.gen;
 
 import org.incava.attest.Parameterized;
-import org.qualog.format.MessageFormatter;
-import org.qualog.writer.StringListWriter;
+import org.quamat.fmt.MessageFormatter;
+import org.quamat.io.StringListWriter;
 
 import java.util.List;
 

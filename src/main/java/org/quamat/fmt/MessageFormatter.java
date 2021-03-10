@@ -1,4 +1,4 @@
-package org.qualog.format;
+package org.quamat.fmt;
 
 import org.incava.ijdk.lang.ICore;
 import org.quamat.fmt.StringFormatter;

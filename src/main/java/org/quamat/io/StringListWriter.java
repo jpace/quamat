@@ -1,6 +1,4 @@
-package org.qualog.writer;
-
-import org.quamat.gen.StringWriter;
+package org.quamat.io;
 
 import java.util.List;
 
