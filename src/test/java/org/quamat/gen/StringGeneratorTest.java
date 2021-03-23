@@ -16,7 +16,7 @@ public class StringGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public void fromKeyValue(StringArray expected, String key, String value) {
         StringArray result = StringArray.empty();
-        StringGenerator sg = createGenerator(result);
+        StringGenerator sg = createStringGenerator(result);
         sg.generate(key, value);
         assertThat(result, equalTo(expected));
     }
@@ -31,7 +31,7 @@ public class StringGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public void fromMessage(StringArray expected, String msg) {
         StringArray result = StringArray.empty();
-        StringGenerator sg = createGenerator(result);
+        StringGenerator sg = createStringGenerator(result);
         sg.generate(msg);
         assertThat(result, equalTo(expected));
     }

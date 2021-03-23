@@ -16,7 +16,7 @@ public class GeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void generate(StringArray expected, String key, Object obj) {
         StringArray result = StringArray.empty();
-        StringGenerator sg = createGenerator(result);
+        StringGenerator sg = createStringGenerator(result);
         new Generator(sg).generate(key, obj);
         assertThat(result, equalTo(expected));
     }

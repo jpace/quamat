@@ -7,11 +7,11 @@ import org.quamat.io.StringListWriter;
 import java.util.List;
 
 public class GeneratorTestCase extends Parameterized {
-    public StringGenerator createGenerator(String keyValueFormat, List<String> lines) {
+    public StringGenerator createStringGenerator(String keyValueFormat, List<String> lines) {
         return new StringGenerator(new MessageFormatter(keyValueFormat, null), new StringListWriter(lines));
     }
 
-    public StringGenerator createGenerator(List<String> lines) {
+    public StringGenerator createStringGenerator(List<String> lines) {
         return new StringGenerator(new MessageFormatter(), new StringListWriter(lines));
     }
 }

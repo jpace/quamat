@@ -1,7 +1,6 @@
 package org.quamat.fmt;
 
 import org.incava.ijdk.lang.ICore;
-import org.quamat.fmt.StringFormatter;
 
 /**
  * Generates one line, using the specified or default format.

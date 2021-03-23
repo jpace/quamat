@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PrimitiveGeneratorTest extends GeneratorTestCase {
     private PrimitiveGenerator createPrimitiveGenerator(StringArray result) {
-        StringGenerator sg = createGenerator(result);
+        StringGenerator sg = createStringGenerator(result);
         return new PrimitiveGenerator(sg);
     }
 
@@ -133,7 +133,7 @@ public class PrimitiveGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void withFormat(StringArray expected, String format, String key, String value) {
         StringArray result = StringArray.empty();
-        StringGenerator sg = createGenerator(format, result);
+        StringGenerator sg = createStringGenerator(format, result);
         new PrimitiveGenerator(sg).generate(key, value);
         assertThat(result, equalTo(expected));
     }

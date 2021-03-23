@@ -11,13 +11,13 @@ import java.util.Map;
 public class ObjectGenerator extends ContainerGenerator {
     private final ObjectTypes objectTypes;
     private final Array<Object> objects;
-    private final PrimitiveArrayGenerator primitiveArrays;
+    private final PrimitiveArrayGenerator primAryGen;
 
     public ObjectGenerator(StringGenerator strings, Integer limit) {
         super(strings, limit);
         this.objectTypes = new ObjectTypes();
         this.objects = Array.empty();
-        this.primitiveArrays = new PrimitiveArrayGenerator(strings, limit);
+        this.primAryGen = new PrimitiveArrayGenerator(strings, limit);
     }
 
     public ObjectGenerator(StringGenerator strings) {
@@ -58,7 +58,7 @@ public class ObjectGenerator extends ContainerGenerator {
             Object[] ary = (Object[]) value;
             generate(key, ary);
         } else {
-            primitiveArrays.generateArray(key, value);
+            primAryGen.generateArray(key, value);
         }
     }
 

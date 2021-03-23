@@ -12,15 +12,15 @@ plugins {
 
 apply plugin: 'java'
 
-group = 'org.qualog'
-version ='3.0.1'
+group = 'org.quamat'
+version ='1.0.0'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 ext {
-    pkgName = 'qualog'
+    pkgName = 'quamat'
     pkgDesc = 'Quasi Logging'
-    githubRepo = 'github.com/jpace/qualog'
+    githubRepo = 'github.com/jpace/quamat'
     pkgLicense = 'MIT'
     pkgLicenseUrl = 'https://mit-license.org/'
     devInfo = {

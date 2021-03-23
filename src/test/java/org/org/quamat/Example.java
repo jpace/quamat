@@ -13,11 +13,15 @@ import java.util.List;
 import java.util.Map;
 
 public class Example extends GeneratorTestCase {
+    public Generator createGenerator(List<String> lines) {
+        StringGenerator sg = new StringGenerator(new MessageFormatter(), new StringListWriter(lines));
+        return new Generator(sg);
+    }
+
     @Test
     public void init() {
         List<String> lines = new ArrayList<>();
-        StringGenerator sg = new StringGenerator(new MessageFormatter(), new StringListWriter(lines));
-        Generator gen = new Generator(sg);
+        Generator gen = createGenerator(lines);
         gen.generate("x", 17);
         writeLines(lines);
 

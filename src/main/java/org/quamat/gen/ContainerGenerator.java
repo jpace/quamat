@@ -5,27 +5,27 @@ package org.quamat.gen;
  */
 public class ContainerGenerator {
     private final Integer limit;
-    private final StringGenerator strings;
+    private final StringGenerator strGen;
 
-    public ContainerGenerator(StringGenerator strings, Integer limit) {
-        this.strings = strings;
+    public ContainerGenerator(StringGenerator strGen, Integer limit) {
+        this.strGen = strGen;
         this.limit = limit;
     }
 
-    public ContainerGenerator(StringGenerator strings) {
-        this(strings, null);
+    public ContainerGenerator(StringGenerator strGen) {
+        this(strGen, null);
     }
 
     public void generateEmpty(String key) {
-        strings.generate(key, "()");
+        strGen.generate(key, "()");
     }
 
     public void generate(String key, String value) {
-        strings.generate(key, value);
+        strGen.generate(key, value);
     }
 
     public void generate(String msg) {
-        strings.generate(msg);
+        strGen.generate(msg);
     }
 
     public int getLimit(int size) {

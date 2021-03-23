@@ -5,15 +5,15 @@ package org.quamat.gen;
  * recursively).
  */
 public class PrimitiveArrayGenerator extends ContainerGenerator {
-    private final PrimitiveGenerator primitives;
+    private final PrimitiveGenerator primGen;
 
-    public PrimitiveArrayGenerator(StringGenerator strings, Integer limit) {
-        super(strings, limit);
-        this.primitives = new PrimitiveGenerator(strings);
+    public PrimitiveArrayGenerator(StringGenerator strGen, Integer limit) {
+        super(strGen, limit);
+        this.primGen = new PrimitiveGenerator(strGen);
     }
 
-    public PrimitiveArrayGenerator(StringGenerator strings) {
-        this(strings, null);
+    public PrimitiveArrayGenerator(StringGenerator strGen) {
+        this(strGen, null);
     }
 
     public void generateArray(String key, Object value) {
@@ -27,101 +27,103 @@ public class PrimitiveArrayGenerator extends ContainerGenerator {
         // 144 short
         // 99 double
 
-        if (value instanceof byte[]) {
-            byte[] ary = (byte[]) value;
-            generate(key, ary);
-        } else if (value instanceof int[]) {
-            int[] ary = (int[]) value;
-            generate(key, ary);
-        } else if (value instanceof char[]) {
-            char[] ary = (char[]) value;
-            generate(key, ary);
-        } else if (value instanceof float[]) {
-            float[] ary = (float[]) value;
-            generate(key, ary);
-        } else if (value instanceof long[]) {
-            long[] ary = (long[]) value;
-            generate(key, ary);
-        } else if (value instanceof boolean[]) {
-            boolean[] ary = (boolean[]) value;
-            generate(key, ary);
-        } else if (value instanceof short[]) {
-            short[] ary = (short[]) value;
-            generate(key, ary);
-        } else if (value instanceof double[]) {
-            double[] ary = (double[]) value;
-            generate(key, ary);
+        if (!checkNull(key, value)) {
+            if (value instanceof byte[]) {
+                byte[] ary = (byte[]) value;
+                generate(key, ary);
+            } else if (value instanceof int[]) {
+                int[] ary = (int[]) value;
+                generate(key, ary);
+            } else if (value instanceof char[]) {
+                char[] ary = (char[]) value;
+                generate(key, ary);
+            } else if (value instanceof float[]) {
+                float[] ary = (float[]) value;
+                generate(key, ary);
+            } else if (value instanceof long[]) {
+                long[] ary = (long[]) value;
+                generate(key, ary);
+            } else if (value instanceof boolean[]) {
+                boolean[] ary = (boolean[]) value;
+                generate(key, ary);
+            } else if (value instanceof short[]) {
+                short[] ary = (short[]) value;
+                generate(key, ary);
+            } else if (value instanceof double[]) {
+                double[] ary = (double[]) value;
+                generate(key, ary);
+            }
         }
     }
 
     public void generate(String key, boolean[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, byte[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, char[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, double[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, float[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, int[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, long[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }
 
     public void generate(String key, short[] ary) {
-        if (!checkNull(key, ary) && !checkEmpty(key, ary.length)) {
+        if (!checkEmpty(key, ary.length)) {
             int max = getLimit(ary.length);
             for (int ai = 0; ai < max; ++ai) {
-                primitives.generate(key, ai, ary[ai]);
+                primGen.generate(key, ai, ary[ai]);
             }
         }
     }

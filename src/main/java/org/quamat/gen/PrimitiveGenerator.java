@@ -5,14 +5,14 @@ package org.quamat.gen;
  * recursively).
  */
 public class PrimitiveGenerator {
-    private final StringGenerator strings;
+    private final StringGenerator strgen;
 
-    public PrimitiveGenerator(StringGenerator strings) {
-        this.strings = strings;
+    public PrimitiveGenerator(StringGenerator strgen) {
+        this.strgen = strgen;
     }
 
     public void generate(String key, String value) {
-        strings.generate(key, value);
+        strgen.generate(key, value);
     }
 
     public void generate(String key, boolean x) {

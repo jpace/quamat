@@ -16,7 +16,7 @@ public class ContainerGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void fromEmpty(StringArray expected, String key) {
         StringArray result = StringArray.empty();
-        StringGenerator sg = createGenerator(result);
+        StringGenerator sg = createStringGenerator(result);
         new ContainerGenerator(sg).generateEmpty(key);
         assertThat(result, equalTo(expected));
     }
@@ -81,7 +81,7 @@ public class ContainerGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void checkNull(boolean expected, String key, Object value) {
         StringArray lines = StringArray.empty();
-        StringGenerator sg = createGenerator(lines);
+        StringGenerator sg = createStringGenerator(lines);
         boolean result = new ContainerGenerator(sg).checkNull(key, value);
         assertThat(result, equalTo(expected));
     }
@@ -96,7 +96,7 @@ public class ContainerGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void checkEmptyInt(boolean expected, String key, int length) {
         StringArray lines = StringArray.empty();
-        StringGenerator sg = createGenerator(lines);
+        StringGenerator sg = createStringGenerator(lines);
         boolean result = new ContainerGenerator(sg).checkEmpty(key, length);
         assertThat(result, equalTo(expected));
     }
@@ -111,7 +111,7 @@ public class ContainerGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void checkEmptyBoolean(boolean expected, String key, boolean condition) {
         StringArray lines = StringArray.empty();
-        StringGenerator sg = createGenerator(lines);
+        StringGenerator sg = createStringGenerator(lines);
         boolean result = new ContainerGenerator(sg).checkEmpty(key, condition);
         assertThat(result, equalTo(expected));
     }
@@ -126,7 +126,7 @@ public class ContainerGeneratorTest extends GeneratorTestCase {
     @TestCaseName("{method}(...) #{index} [{params}]")
     public <T> void withFormat(StringArray expected, String format, String key, String value) {
         StringArray result = StringArray.empty();
-        StringGenerator sg = createGenerator(format, result);
+        StringGenerator sg = createStringGenerator(format, result);
         new ContainerGenerator(sg).generate(key, value);
         assertThat(result, equalTo(expected));
     }
