@@ -1,4 +1,4 @@
-package org.org.quamat;
+package org.quamat;
 
 import org.junit.Test;
 import org.quamat.fmt.MessageFormatter;

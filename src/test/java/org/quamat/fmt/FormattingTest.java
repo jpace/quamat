@@ -1,4 +1,4 @@
-package org.qualog.jdk;
+package org.quamat.fmt;
 
 import junitparams.Parameters;
 import junitparams.naming.TestCaseName;

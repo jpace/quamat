@@ -1,4 +1,4 @@
-package org.qualog.jdk;
+package org.quamat.fmt;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

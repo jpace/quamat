@@ -1,4 +1,4 @@
-package org.qualog.format;
+package org.quamat.fmt;
 
 import java.util.List;
 import junitparams.Parameters;
