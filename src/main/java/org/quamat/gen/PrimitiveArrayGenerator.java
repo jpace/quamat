@@ -7,6 +7,13 @@ package org.quamat.gen;
 public class PrimitiveArrayGenerator extends ContainerGenerator {
     private final PrimitiveGenerator primGen;
 
+    /**
+     * Creates a generator for arrays of primitives, with the given limit for
+     * the number of elements written.
+     *
+     * @param strGen the string generator
+     * @param limit the limit; no limit if null.
+     */
     public PrimitiveArrayGenerator(StringGenerator strGen, Integer limit) {
         super(strGen, limit);
         this.primGen = new PrimitiveGenerator(strGen);

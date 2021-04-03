@@ -74,11 +74,11 @@ public class JdkFormatterTest extends Parameterized {
         pl.add(params("\\w{3} \\d{2}\n", "%1$tb %1$td%n"));
 
         // default
-        pl.add(params("\\w{3} \\d{2}, \\d{4} \\d{1,2}:\\d{2}:\\d{2} \\w{2} org.qualog.JdkFormatterTest format\nINFO: L4 A\n",
+        pl.add(params("\\w{3} \\d{2}, \\d{4} \\d{1,2}:\\d{2}:\\d{2} \\w{2} org.quamat.fmt.JdkFormatterTest format\nINFO: L4 A\n",
                 "%1$tb %1$td, %1$tY %1$tl:%1$tM:%1$tS %1$Tp %2$s%n%4$s: %5$s%6$s%n"));
 
-        pl.add(params("org.qualog.JdkFormatterTest format\n", "%2$s%n"));
-        pl.add(params("org.qualog.JdkFormatterTest#format%3\\$s%n\n", "%3$s%n"));
+        pl.add(params("org.quamat.fmt.JdkFormatterTest format\n", "%2$s%n"));
+        pl.add(params("org.quamat.fmt.JdkFormatterTest#format%3\\$s%n\n", "%3$s%n"));
         pl.add(params("INFO\n", "%4$s%n"));
         pl.add(params("L4 A\n", "%5$s%n"));
         pl.add(params("\n", "%6$s%n"));

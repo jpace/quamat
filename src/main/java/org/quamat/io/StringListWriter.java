@@ -3,7 +3,7 @@ package org.quamat.io;
 import java.util.List;
 
 /**
- * Adds output strings to a List<String>.
+ * Adds output strings to a List&lt;String&gt;.
  */
 public class StringListWriter implements StringWriter {
     private final List<String> lines;

@@ -35,7 +35,7 @@ bintray {
     configurations = ['archives'] // Use the archives Configuration.
     pkg {
         repo = 'org.incava'
-        name = 'qualog'
+        name = 'quamat'
         userOrg = user
         licenses = [pkgLicense]
         publicDownloadNumbers = true
